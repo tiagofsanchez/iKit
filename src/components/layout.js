@@ -7,13 +7,13 @@ import Menu from "./menu"
 const LayoutContainer = styled.div`
   display: grid;
   grid-gap: 50px;
-  margin: 0px auto;
+  margin: -8px;
 `
 
 const Layout = ({ children }) => {
   return (
     <LayoutContainer>
-      <header>
+      <header sx={{variant: `layout.header`}}>
         <Menu />
       </header>
       <main>{children}</main>

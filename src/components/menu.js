@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
+import { Link } from 'gatsby'
 
 const Container = styled.div`
   display: flex;
@@ -13,20 +14,17 @@ const MenuDesktop = styled.ul`
   padding: 0;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(4, 150px);
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
 `
-
 
 const Menu = () => {
   return (
     <Container>
-      <div>Logo</div>
+      <div><Link to="/" sx={{variant: `links.primary`}}>Logo</Link></div>
       <nav>
       <MenuDesktop sx={{color: `primary2`}}>
-        <li>Frameworks</li>
-        <li>About</li>
-        <li>Blog</li>
-        <li>Search</li>
+        <li><Link to='/about' sx={{variant:`links.primary`}}>About</Link></li>
+        <li><Link to="/search" sx={{variant: `links.primary`}}>Search</Link></li>
       </MenuDesktop>
       </nav>
     </Container>
