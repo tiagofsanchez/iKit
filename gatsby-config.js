@@ -5,5 +5,16 @@
  */
 module.exports = {
   /* Your site config here */
-  plugins: ["gatsby-plugin-theme-ui", "gatsby-plugin-emotion"],
+  plugins: [
+    "gatsby-plugin-theme-ui",
+    "gatsby-plugin-emotion",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svgs/,
+        },
+      },
+    },
+  ],
 }

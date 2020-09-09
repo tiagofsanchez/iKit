@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ["375px", "768px", "1440px"],
+  breakpoints: ["420px", "768px", "1440px"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors: {
     text: "black",
@@ -34,6 +34,10 @@ export default {
     caps: "0.2em",
   },
   text: {
+    menu: { 
+      fontWeight: "bold",
+      fontSize: [20, 22, 22], 
+    },
     tagline: {
       fontWeight: "soft",
       fontSize: [14, 18, 18],
@@ -103,9 +107,18 @@ export default {
       padding: `0`,
     },
   },
+  buttons: { 
+    icon: { 
+      width: "auto", 
+      height: "auto", 
+      cursor: "pointer",
+    }
+  },
   links: {
     primary: {
       textDecoration: `none`,
+      p: "10px 20px",
+      borderRadius: 5,
       "&:active": {
         color: "primary2",
       },
