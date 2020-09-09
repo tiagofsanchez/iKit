@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 export default function Home() {
   return (  
-     <Layout>
+     <Layout withHero={true}>
        <div sx={{variant: `layout.main`}}>This is my main!!</div>
      </Layout>
   )

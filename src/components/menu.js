@@ -16,7 +16,7 @@ const IconContainer = styled.div`
   width: auto;
   height: auto;
   z-index: 100;
-  position: stiky;
+  position: relative;
 `
 
 const MenuItems = styled.ul`
@@ -40,12 +40,48 @@ const NavDesktop = styled.nav`
 
 const NavMobile = styled.nav`
   z-index: 1000;
+  margin-top: 50px;
   position: fixed;
 `
 
 const active = {
   background: "linear-gradient(209.68deg, #40C9FF 20.41%, #E81CFF 94.89%)",
 }
+
+const menuNavItems = (
+  <MenuItems sx={{ variant: `text.menu` }}>
+    <li>
+      <Link
+        to="/"
+        activeClassName="active"
+        sx={{ variant: `links.primary`, color: `text2` }}
+        activeStyle={active}
+      >
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/about"
+        activeClassName="active"
+        sx={{ variant: `links.primary`, color: `text2` }}
+        activeStyle={active}
+      >
+        About
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/search"
+        activeClassName="active"
+        sx={{ variant: `links.primary`, color: `text2` }}
+        activeStyle={active}
+      >
+        Search
+      </Link>
+    </li>
+  </MenuItems>
+)
 
 const Menu = ({ backdropHandler, isOpen }) => {
   return (
@@ -56,78 +92,10 @@ const Menu = ({ backdropHandler, isOpen }) => {
             <IkLogo />
           </IconContainer>
         </Link>
-        <NavDesktop>
-          <MenuItems sx={{ variant: `text.menu` }}>
-            <li>
-              <Link
-                to="/"
-                activeClassName="active"
-                sx={{ variant: `links.primary` }}
-                activeStyle={active}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                activeClassName="active"
-                sx={{ variant: `links.primary` }}
-                activeStyle={active}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/search"
-                activeClassName="active"
-                sx={{ variant: `links.primary` }}
-                activeStyle={active}
-              >
-                Search
-              </Link>
-            </li>
-          </MenuItems>
-        </NavDesktop>
+        <NavDesktop>{menuNavItems}</NavDesktop>
         <MenuButton backdropHandler={backdropHandler} isOpen={isOpen} />
       </Container>
-      {isOpen && (
-        <NavMobile>
-          <MenuItems sx={{ variant: `text.menu` }}>
-            <li>
-              <Link
-                to="/"
-                activeClassName="active"
-                sx={{ variant: `links.primary` }}
-                activeStyle={active}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                activeClassName="active"
-                sx={{ variant: `links.primary` }}
-                activeStyle={active}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/search"
-                activeClassName="active"
-                sx={{ variant: `links.primary` }}
-                activeStyle={active}
-              >
-                Search
-              </Link>
-            </li>
-          </MenuItems>
-        </NavMobile>
-      )}
+      {isOpen && <NavMobile>{menuNavItems}</NavMobile>}
     </div>
   )
 }
