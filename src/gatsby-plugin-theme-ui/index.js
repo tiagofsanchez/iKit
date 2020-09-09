@@ -21,6 +21,7 @@ export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 60, 64],
   fontWeights: {
     body: 400,
+    soft: 200,
     heading: 700,
     bold: 700,
   },
@@ -32,19 +33,59 @@ export default {
     body: "normal",
     caps: "0.2em",
   },
+  text: {
+    tagline: {
+      fontWeight: "soft",
+      fontSize: [14, 18, 18],
+    },
+    caption: {
+      fontWeight: "soft",
+      fontSize: [12, 14, 14],
+    },
+  },
   styles: {
     root: {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
-    },
-    h1: {
-      fontSize: "60px",
-      fontFamily: "heading",
-      fontWeight: "heading",
-      color: "primary",
-      mt: 4,
-      mb: 2,
+      h1: {
+        fontSize: [34, 60, 60],
+        fontFamily: "heading",
+        fontWeight: "heading",
+        color: "primary",
+        mt: 4,
+        mb: 2,
+      },
+      h2: {
+        fontSize: [32, 50, 50],
+        fontFamily: "heading",
+        fontWeight: "heading",
+        color: "primary",
+        mt: 4,
+        mb: 2,
+      },
+      h3: {
+        fontSize: [28, 40, 40],
+        fontFamily: "heading",
+        fontWeight: "heading",
+        color: "primary",
+        mt: 4,
+        mb: 2,
+      },
+      h4: {
+        fontSize: [24, 30, 30],
+        fontFamily: "heading",
+        fontWeight: "heading",
+        color: "primary",
+        mt: 4,
+        mb: 2,
+      },
+      p: {
+        fontSize: [17, 20, 20],
+        fontFamily: "body",
+        fontWeight: "body",
+        color: "text",
+      },
     },
   },
   layout: {
@@ -65,6 +106,9 @@ export default {
   links: {
     primary: {
       textDecoration: `none`,
+      "&:active": {
+        color: "primary2",
+      },
     },
   },
 }
