@@ -5,8 +5,8 @@ import Hero from "../../svgs/heroHeader.svg"
 
 const Container = styled.div`
   position: absolute;
-  z-index: -10; 
-width: 100%;
+  z-index: -10;
+  width: 100%;
 `
 
 const HeroHeader = () => {

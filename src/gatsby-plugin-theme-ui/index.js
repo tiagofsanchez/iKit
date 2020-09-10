@@ -1,10 +1,11 @@
 export default {
-  breakpoints: ["420px", "768px", "1440px"],
+  breakpoints: ["420px", "768px", "1024px","1440px"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors: {
     text: "black",
     text2: "white",
     background: "#F2F6FF",
+    backgroundHeader: "#E7E6FF",
     primary: "#8352FD",
     primary2: "#3913B8",
     secondary: "#00CFFD",
@@ -34,9 +35,9 @@ export default {
     caps: "0.2em",
   },
   text: {
-    menu: { 
+    menu: {
       fontWeight: "bold",
-      fontSize: [20, 22, 22], 
+      fontSize: [20, 22, 22],
     },
     tagline: {
       fontWeight: "soft",
@@ -95,10 +96,13 @@ export default {
   layout: {
     header: {
       color: "text",
-      margin: 4,
+      margin: [2, 2, 4],
     },
     main: {
-      margin: 4,
+      width: ["90%", "80%", "90%"],
+      margin: "auto",
+      bg: "background",
+      padding: 4,
     },
     footer: {
       color: "text",
@@ -107,12 +111,42 @@ export default {
       padding: `0`,
     },
   },
-  buttons: { 
-    icon: { 
-      width: "auto", 
-      height: "auto", 
+  buttons: {
+    icon: {
+      width: "auto",
+      height: "auto",
       cursor: "pointer",
-    }
+    },
+  },
+  cards: {
+    primary: {
+      width: ["261px", "261px", "352px"],
+      borderRadius: 15,
+      background: `white`,
+      cursor: "pointer",
+      boxShadow: "0px 10px 20px rgba(57, 19, 184, 0.1)",
+      "&:hover": {
+        boxShadow: "0px 5px 10px #8352FD",
+      },
+    },
+    header: {
+      borderRadius: "6px 6px 0px 0px",
+      display: `grid`,
+      justifyContent: `center`,
+      bg: "backgroundHeader",
+      p: 3,
+    },
+    description: {
+      display: `grid`,
+      p: 3,
+    },
+    formCard: {
+      width: ["100%","100%","100%", "1024px"], 
+      margin: "auto",
+      borderRadius: 15,
+      bg: "background",
+      boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.25)",
+    },
   },
   links: {
     primary: {
