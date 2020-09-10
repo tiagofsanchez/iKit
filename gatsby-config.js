@@ -16,5 +16,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon : `./src/images/iKLogo.png`
+      },
+    },
   ],
 }

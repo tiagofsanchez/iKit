@@ -5,12 +5,13 @@ Starting to put together the different components that we will need to get this 
 ![The project](./src/images/desktopView.png)
 
 
-You will be able to see a live demo to check the components soon.
+Check the [LIVE DEMO](https://ikit.netlify.app/) 
 
 ## Dev Notes:
 
 I still have plenty of things todo and will try to build them on the next couple of days
 
+- [ ] Story Book implementation
 - [ ] React Helmet
 - [ ] SEO component
 - [ ] Link the form
@@ -19,5 +20,6 @@ I still have plenty of things todo and will try to build them on the next couple
 - [ ] About page
 - [ ] Search implementation
 - [ ] Share components
-
+- [ ] Implement different layouts 
+- [ ] Footer 
 
