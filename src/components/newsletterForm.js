@@ -63,11 +63,11 @@ const NewsletterForm = () => {
           </p>
           <FormContainer>
             <GridContainer>
-              <Input />
-              <Input />
+              <Input placeholder="Your name"/>
+              <Input placeholder="Your email"/>
             </GridContainer>
             <GridContainer>
-              <Button>Sign up</Button>
+              <Button >Sign up</Button>
               <p sx={{ variant: `text.tagline`, m: `0px` }}>
                 By clicking on Sing up you agree to our Terms of service and
                 privacy policy.

@@ -9,6 +9,7 @@ import NewsletterForm from "../components/newsletterForm";
 const About = () => (
   <Layout withHero={true}>
     <section sx={{ variant: `layout.main` }}>
+      <h1>Should be the About Page</h1>
       <h1>All components will be here till I set up story book</h1>
       <hr />
       <h1>Menu</h1>

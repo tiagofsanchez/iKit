@@ -112,6 +112,9 @@ export default {
     },
   },
   buttons: {
+    primary: { 
+      cursor: "pointer",
+    },
     icon: {
       width: "auto",
       height: "auto",
