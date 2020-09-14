@@ -21,5 +21,6 @@ I still have plenty of things todo and will try to build them on the next couple
 - [ ] Search implementation
 - [ ] Share components
 - [ ] Implement different layouts 
-- [ ] Footer 
+- [ ] Footer
+- [x] CMS integration (strapi) 
 

@@ -4,7 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Build Stuff",
+  },
   plugins: [
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-emotion",
@@ -19,7 +21,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        icon : `./src/images/iKLogo.png`
+        icon: `./src/images/iKLogo.png`,
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        contentTypes: [`frameworks`, `user`],
+        queryLimit: 1000,
       },
     },
   ],
