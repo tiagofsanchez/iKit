@@ -38,7 +38,7 @@ const SignUpContainer = styled.div`
   }
 `
 
-const FormContainer = styled.from`
+const FormContainer = styled.form`
   display: grid;
   grid-gap: 20px;
 `

@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
-        contentTypes: [`frameworks`, `user`],
+        apiURL: `http://localhost:1337`, //I know that I will need to implement the .env
+        contentTypes: [`frameworks`, `user` , `type-of-frameworks`],
         queryLimit: 1000,
       },
     },
