@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-emotion",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

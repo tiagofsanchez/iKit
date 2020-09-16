@@ -10,7 +10,7 @@ import NewsletterForm from "../components/newsletterForm"
 const _ = require("lodash")
 
 const Index = ({ data }) => {
-  const { allStrapiTypeOfFrameworks , site } = data
+  const { allStrapiTypeOfFrameworks, site } = data
   const frameworkPath = site.siteMetadata.frameworkPath
 
   return (
@@ -51,10 +51,13 @@ const Index = ({ data }) => {
         </p>
         {allStrapiTypeOfFrameworks.edges.map(node => {
           return (
-            <div>
-              <h4 key={node.node.type}>{node.node.type}</h4>
-              {node.node.frameworks.map(fram => (
-                <Link to={`${frameworkPath}/${_.kebabCase(fram.name)}`}>
+            <div key={node.node.type}>
+              <h4>{node.node.type}</h4>
+              {node.node.frameworks.map((fram, index) => (
+                <Link
+                  to={`${frameworkPath}/${_.kebabCase(fram.name)}`}
+                  key={index}
+                >
                   <p>{fram.name}</p>
                 </Link>
               ))}

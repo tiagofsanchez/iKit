@@ -91,6 +91,13 @@ export default {
         fontWeight: "body",
         color: "text",
       },
+      li: { 
+        fontSize: [17, 20, 20],
+        fontFamily: "body",
+        fontWeight: "body",
+        color: "text",
+
+      },
     },
   },
   layout: {
