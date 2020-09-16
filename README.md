@@ -15,7 +15,7 @@ I still have plenty of things todo and will try to build them on the next couple
 - [ ] React Helmet
 - [ ] SEO component
 - [ ] Link the form
-- [ ] Build framework template page
+- [x] Build framework template page
 - [ ] Search page
 - [ ] About page
 - [ ] Search implementation
