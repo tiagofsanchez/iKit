@@ -6,6 +6,10 @@
 module.exports = {
   siteMetadata: {
     title: "Build Stuff",
+    blogPath: `/blog`, 
+    appPath: `/app`,
+    frameworkPath: `/framework`, 
+    githubUrl: ''
   },
   plugins: [
     "gatsby-plugin-theme-ui",

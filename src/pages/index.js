@@ -1,15 +1,17 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Menu from "../components/menu"
 import FrameworkCard from "../components/ui/frameworkCard"
 import NewsletterForm from "../components/newsletterForm"
 
+const _ = require("lodash")
+
 const Index = ({ data }) => {
-  const { allStrapiTypeOfFrameworks } = data
-  console.log(allStrapiTypeOfFrameworks)
+  const { allStrapiTypeOfFrameworks , site } = data
+  const frameworkPath = site.siteMetadata.frameworkPath
 
   return (
     <Layout withHero={true}>
@@ -52,7 +54,9 @@ const Index = ({ data }) => {
             <div>
               <h4 key={node.node.type}>{node.node.type}</h4>
               {node.node.frameworks.map(fram => (
-                <p>{fram.name}</p>
+                <Link to={`${frameworkPath}/${_.kebabCase(fram.name)}`}>
+                  <p>{fram.name}</p>
+                </Link>
               ))}
             </div>
           )
@@ -73,6 +77,11 @@ export const query = graphql`
             description
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        frameworkPath
       }
     }
   }
